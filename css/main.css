@@ -199,6 +199,31 @@ a:hover {
   color: yellow;
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-container {
+  -webkit-animation: 0.8s ease-out 0s 1 fadein;
+          animation: 0.8s ease-out 0s 1 fadein;
+}
 .main-container > .wrapper {
   padding: 0 15px;
 }

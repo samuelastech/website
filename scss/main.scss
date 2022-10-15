@@ -1,43 +1,59 @@
 @import '_abstract_variables';
 @import '_global_normalize';
 
-*{
+* {
     overflow-x: hidden;
 }
 
-body{
+body {
     font-family: $font-family;
     color: $font-color-body;
     background-color: $background-color;
     overflow: hidden;
 }
 
-a{
+a {
     all: unset;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         color: yellow;
     }
 }
 
-.main-container{
-    & > .wrapper{
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.main-container {
+    animation: 0.8s ease-out 0s 1 fadein;
+
+
+    &>.wrapper {
         padding: 0 15px;
     }
 
-    & > .wrapper > .title{
+    &>.wrapper>.title {
         color: $font-color-title;
         font-size: 3.25rem;
     }
 
-    & > .wrapper > .paragraph{
+    &>.wrapper>.paragraph {
         font-size: 1.063rem;
         line-height: 163%;
     }
 }
 
-.footer-container{
+.footer-container {
     position: fixed;
     bottom: 0;
     width: 100%;

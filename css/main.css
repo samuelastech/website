@@ -223,6 +223,8 @@ a:hover {
 .main-container {
   -webkit-animation: 0.8s ease-out 0s 1 fadein;
           animation: 0.8s ease-out 0s 1 fadein;
+  max-width: 768px;
+  margin: 0 auto;
 }
 .main-container > .wrapper {
   padding: 0 15px;
@@ -245,4 +247,32 @@ a:hover {
   color: #ffffff;
   background-color: #7b7afd;
   border-top: 10px solid #6969db;
+}
+
+@media (min-width: 480px) {
+  .main-container > .wrapper {
+    padding: 0 45px;
+  }
+  .main-container > .wrapper > .title {
+    font-size: 3.625rem;
+  }
+  .main-container > .wrapper > .paragraph {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .main-container > .wrapper > .paragraph {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 991px) {
+  .main-container {
+    max-width: 715px;
+  }
+  .main-container > .wrapper > .title {
+    font-size: 4.125rem;
+  }
+  .main-container > .wrapper > .paragraph {
+    font-size: 1.688rem;
+  }
 }/*# sourceMappingURL=main.css.map */

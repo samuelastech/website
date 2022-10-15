@@ -224,6 +224,7 @@ a:hover {
   -webkit-animation: 0.8s ease-out 0s 1 fadein;
           animation: 0.8s ease-out 0s 1 fadein;
   max-width: 768px;
+  min-height: 95vh;
   margin: 0 auto;
 }
 .main-container > .wrapper {
@@ -232,6 +233,7 @@ a:hover {
 .main-container > .wrapper > .title {
   color: #ffffff;
   font-size: 3.25rem;
+  overflow-y: hidden;
 }
 .main-container > .wrapper > .paragraph {
   font-size: 1.063rem;
@@ -239,8 +241,6 @@ a:hover {
 }
 
 .footer-container {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 20px 15px;
   font-family: "Source Code Pro", monospace;

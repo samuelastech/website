@@ -37,6 +37,7 @@ a {
 .main-container {
     animation: 0.8s ease-out 0s 1 fadein;
     max-width: 768px;
+    min-height: 95vh;
     margin: 0 auto;
 
     &>.wrapper {
@@ -46,6 +47,7 @@ a {
     &>.wrapper>.title {
         color: $font-color-title;
         font-size: 3.25rem;
+        overflow-y: hidden;
     }
 
     &>.wrapper>.paragraph {
@@ -55,8 +57,6 @@ a {
 }
 
 .footer-container {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     padding: 20px 15px;
     font-family: $font-family-footer;

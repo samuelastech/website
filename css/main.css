@@ -180,11 +180,14 @@ template {
   display: none;
 }
 
+* {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   color: #959595;
   background-color: #000000;
-  padding: 0 15px;
   overflow: hidden;
 }
 
@@ -196,20 +199,22 @@ a:hover {
   color: yellow;
 }
 
-.main-container > .title {
+.main-container > .wrapper {
+  padding: 0 15px;
+}
+.main-container > .wrapper > .title {
   color: #ffffff;
   font-size: 3.25rem;
 }
-.main-container > .paragraph {
+.main-container > .wrapper > .paragraph {
   font-size: 1.063rem;
   line-height: 163%;
 }
 
 .footer-container {
-  width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  width: 100%;
   padding: 20px 15px;
   font-family: "Source Code Pro", monospace;
   color: #ffffff;

@@ -1,11 +1,14 @@
 @import '_abstract_variables';
 @import '_global_normalize';
 
+*{
+    overflow-x: hidden;
+}
+
 body{
     font-family: $font-family;
     color: $font-color-body;
     background-color: $background-color;
-    padding: 0 15px;
     overflow: hidden;
 }
 
@@ -19,23 +22,25 @@ a{
 }
 
 .main-container{
-    
-    & > .title{
+    & > .wrapper{
+        padding: 0 15px;
+    }
+
+    & > .wrapper > .title{
         color: $font-color-title;
         font-size: 3.25rem;
     }
 
-    & > .paragraph{
+    & > .wrapper > .paragraph{
         font-size: 1.063rem;
         line-height: 163%;
     }
 }
 
 .footer-container{
-    width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
+    width: 100%;
     padding: 20px 15px;
     font-family: $font-family-footer;
     color: $font-color;

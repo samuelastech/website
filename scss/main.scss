@@ -1,0 +1,44 @@
+@import '_abstract_variables';
+@import '_global_normalize';
+
+body{
+    font-family: $font-family;
+    color: $font-color-body;
+    background-color: $background-color;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+
+    &:hover{
+        color: yellow;
+    }
+}
+
+.main-container{
+    
+    & > .title{
+        color: $font-color-title;
+        font-size: 3.25rem;
+    }
+
+    & > .paragraph{
+        font-size: 1.063rem;
+        line-height: 163%;
+    }
+}
+
+.footer-container{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 15px;
+    font-family: $font-family-footer;
+    color: $font-color;
+    background-color: $main-color;
+    border-top: 10px solid $main-color-dark;
+}

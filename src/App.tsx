@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { TypingText } from "./components/TypingText";
 
 function App() {
   const [headerColor, setHeaderColor] = useState<string>('');
@@ -29,6 +30,10 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    
+  }, []);
+
   return (
     <main ref={mainRef} className="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar scroll-smooth">
       <header className={`fixed top-0 left-0 p-6 h-16 w-full flex items-center border-b font-mono transition-all duration-200 z-50 ${headerColor}`}>
@@ -40,8 +45,12 @@ function App() {
       </header>
 
       <section className="relative snap-start w-full min-h-screen flex flex-col items-center justify-center p-2 text-center">
-        <h1 className="font-bold text-8xl sm:text-9xl w-full">Samuel<br />Araujo<br />Souza</h1>
-        <h2 className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300">Desenvolvedor back-end</h2>
+        <h1 className="
+          font-bold
+          text-8xl
+          sm:text-9xl
+        ">Samuel<br/>Araujo<br/>Souza</h1>
+        <TypingText className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300" elementType='h2' cursorColor="purple-300">Desenvolvedor back-end</TypingText>
       </section>
 
       <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-lime-800 to-emerald-800">

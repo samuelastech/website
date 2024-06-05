@@ -12,6 +12,15 @@ module.exports = {
       fontFamily: {
         'mono': ['Roboto Mono', 'monospace'],
         'tlou': ['AC Compacta', 'sans serif']
+      },
+      keyframes: {
+        'blink': {
+          '0%, 100%': { color: 'transparent' },
+          '50%': { color: 'var(--blink-color)' },
+        },
+      },
+      animation: {
+        'blink': 'blink .75s step-end infinite'
       }
     },
   },

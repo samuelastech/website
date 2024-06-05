@@ -7,6 +7,8 @@ function App() {
   const [videoIsOpen, setVideoIsOpen] = useState<boolean>(false);
   const mainRef = useRef<HTMLElement>(null);
 
+  const scrollBackToTop = () => mainRef.current?.scrollTo(0, 0);
+
   const toggleVideo = () => setVideoIsOpen(!videoIsOpen);
 
   const handleScroll = () => {
@@ -30,7 +32,11 @@ function App() {
   return (
     <main ref={mainRef} className="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar scroll-smooth">
       <header className={`fixed top-0 left-0 p-6 h-16 w-full flex items-center border-b font-mono transition-all duration-200 z-50 ${headerColor}`}>
-        <h1 className="font-medium text-lg transition-[color] duration-200"><span className="font-extralight">@</span>samuelastech<span className="font-extralight">()</span></h1>
+        <h1 className="font-medium text-lg transition-[color] duration-200 cursor-pointer" onClick={scrollBackToTop}>
+          <span className="font-extralight">@</span>
+          samuelastech
+          <span className="font-extralight">()</span>
+        </h1>
       </header>
 
       <section className="relative snap-start w-full min-h-screen flex flex-col items-center justify-center p-2 text-center">

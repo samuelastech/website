@@ -61,10 +61,10 @@ function App() {
             The Last of Us
           </h1>
           <p className="text-zinc-300 text-lg hyphens-auto text-justify">
-            Em 2013, foi lançado um dos melhores jogos de todos os tempos. Com ele nasceu minha vontade de se tornar um
-            game designer e fazer jogos com gráficos tão lindos como os que eu acabara de testemunhar. Comecei no
-            design, eventualmente conheci a trinca do desenvolvimento web: HTML, CSS e JavaScript. Posso dizer que esse
-            foi meu inicio no mundo do desenvolvimento.
+            Em 2013, foi lançado um dos melhores jogos de todos os tempos. Com ele, nasceu minha vontade de me tornar um
+            game designer e criar jogos com gráficos tão lindos quanto os que eu acabara de testemunhar. Comecei no
+            design e, eventualmente, conheci a tríade do desenvolvimento web: HTML, CSS e JavaScript. Posso dizer que
+            esse foi o meu início no mundo do desenvolvimento.
           </p>
         </div>
       </section>
@@ -76,10 +76,12 @@ function App() {
             Desenvolvimento de Sistemas
           </h1>
           <p className="text-zinc-300 text-lg hyphens-auto text-justify">
-            Em 2017, iniciei os estudos técnicos. Um dos professores apresentou a disciplina de lógica de programação de um
-            jeito não convecional: utilizando a lógica das estratégias de batalha de Alexandre, o grande, nas guerras
-            greco-pérsicas. A narrativa não me deixava piscar. Um jeito criativo e altamente engajante de ensinar que me
-            fez ter certeza que era ali que eu queria estar.
+            Em 2017, iniciei meus estudos técnicos. Um dos professores
+            apresentou a disciplina de lógica de programação de um jeito não
+            convencional: utilizando a lógica das estratégias de batalha de
+            Alexandre, o Grande, nas guerras greco-pérsicas. A narrativa não me
+            deixava piscar. Foi um jeito criativo e altamente engajante de
+            ensinar, que me fez ter certeza de que era ali que eu queria estar.
           </p>
         </div>
 
@@ -157,8 +159,8 @@ function App() {
             DevOps & Back-End
           </h1>
           <p className="text-zinc-300 text-lg hyphens-auto text-justify">
-            No 4º semestre da graduação, entrei em um estágio de Engenharia DevOps na <a className="text-blue-400 underline" href="https://www.grupothink.com.br/">Think IT</a>.
-            Entendi que a agilidade precisava se expandir para outros âmbitos de uma empresa muito além de apenas a 
+            No 4º semestre da graduação, comecei em um estágio de Engenharia DevOps na <a className="text-blue-400 underline" href="https://www.grupothink.com.br/">Think IT</a>.
+            Entendi que a agilidade precisava se expandir para outros âmbitos de uma empresa, muito além da 
             equipe de desenvolvimento. Depois de um tempo, a empresa me deu a oportunidade de atuar como desenvolvedor
             back-end.
           </p>

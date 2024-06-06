@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+
+// Icons
 import { FaPlay } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+
+//Componentes
 import { TypingText } from "./components/TypingText";
+
 
 function App() {
   const [headerColor, setHeaderColor] = useState<string>('');
@@ -30,10 +35,6 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    
-  }, []);
-
   return (
     <main ref={mainRef} className="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar scroll-smooth">
       <header className={`fixed top-0 left-0 p-6 h-16 w-full flex items-center border-b font-mono transition-all duration-200 z-50 ${headerColor}`}>
@@ -45,34 +46,33 @@ function App() {
       </header>
 
       <section className="relative snap-start w-full min-h-screen flex flex-col items-center justify-center p-2 text-center">
-        <h1 className="
-          font-bold
-          text-8xl
-          sm:text-9xl
-        ">Samuel<br/>Araujo<br/>Souza</h1>
-        <TypingText className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300" elementType='h2' cursorColor="purple-300">Desenvolvedor back-end</TypingText>
+        <h1 className="font-bold text-8xl sm:text-9xl">Samuel<br/>Araujo<br/>Souza</h1>
+        <TypingText className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300" elementType='h2' cursorColor="white">Desenvolvedor back-end</TypingText>
       </section>
 
       <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-lime-800 to-emerald-800">
         <div className="max-w-[768px]">
-          <h1 className="font-tlou text-6xl sm:text-9xl uppercase text-center">The Last<br />of Us</h1>
-          <p className="text-zinc-300 text-lg">
+          <h1 className="font-tlou text-6xl sm:text-9xl uppercase text-center mb-8">
+            <span className="text-xs sm:text-base block font-mono font-light tracking-widest uppercase mb-2">A fagulha inicial</span>
+            The Last of Us
+          </h1>
+          <p className="text-zinc-300 text-lg hyphens-auto text-justify">
             Em 2013, foi lançado um dos melhores jogos de todos os tempos. Com ele nasceu minha vontade de se tornar um
             game designer e fazer jogos com gráficos tão lindos como os que eu acabara de testemunhar. Comecei no
             design, eventualmente conheci a trinca do desenvolvimento web: HTML, CSS e JavaScript. Posso dizer que esse
-            foi meu inicio no mundo do desenvolvimento
+            foi meu inicio no mundo do desenvolvimento.
           </p>
         </div>
       </section>
 
       <section className="relative snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-emerald-800 to-cyan-800">
         <div className="max-w-[768px]">
-          <h1 className="text-4xl sm:text-6xl font-bold text-center mb-4">
-            <span className="text-base block font-mono tracking-widest uppercase">ETEC de Embu das Artes</span>
+          <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
+            <span className="text-xs sm:text-base block font-mono font-light tracking-widest uppercase mb-2">Técnico</span>
             Desenvolvimento de Sistemas
           </h1>
-          <p className="text-zinc-300 text-lg">
-            Em 2017, iniciei os estudos técnicos. O professor apresentou a disciplina de lógica de programação de um
+          <p className="text-zinc-300 text-lg hyphens-auto text-justify">
+            Em 2017, iniciei os estudos técnicos. Um dos professores apresentou a disciplina de lógica de programação de um
             jeito não convecional: utilizando a lógica das estratégias de batalha de Alexandre, o grande, nas guerras
             greco-pérsicas. A narrativa não me deixava piscar. Um jeito criativo e altamente engajante de ensinar que me
             fez ter certeza que era ali que eu queria estar.
@@ -134,6 +134,93 @@ function App() {
           </iframe>
         </div>
       </section>
+
+      <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-cyan-800 to-indigo-800">
+        <div className="max-w-[768px]">
+          <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
+            <span className="text-xs sm:text-base block font-mono font-light tracking-widest uppercase mb-2">Bacharelado</span>
+            Ciência da Computação
+          </h1>
+          <p className="text-zinc-300 text-lg hyphens-auto text-justify">
+            Em 2020, entrei no ensino superior. Provei de diversas disciplinas e conheci a computação a fundo.
+          </p>
+        </div>
+      </section>
+      <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-indigo-800 to-yellow-800">
+        <div className="max-w-[768px]">
+          <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
+            <span className="text-xs sm:text-base block font-mono font-light tracking-widest uppercase mb-2">Experiência profissional</span>
+            DevOps & Back-End
+          </h1>
+          <p className="text-zinc-300 text-lg hyphens-auto text-justify">
+            No 4º semestre da graduação, entrei em um estágio de Engenharia DevOps na <a href="https://www.grupothink.com.br/">Think IT</a>.
+            Entendi que a agilidade precisava se expandir para outros âmbitos de uma empresa muito além de apenas a 
+            equipe de desenvolvimento. Depois de um tempo, a empresa me deu a oportunidade de atuar como desenvolvedor
+            back-end.
+          </p>
+        </div>
+      </section>
+      <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-yellow-800 to-red-800">
+        <div className="max-w-[768px]">
+          <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
+            <span className="text-xs sm:text-base block font-mono font-light tracking-widest uppercase mb-2">Pós-graduação MBA</span>
+            Arquitetura Full-Cycle
+          </h1>
+          <p className="text-zinc-300 text-lg hyphens-auto text-justify">
+            Presente momento. Comecei em 2024, previsão de conclusão em 2025. Meu objetivo é a especialização em todo
+            ciclo de vida do software — da concepção da solução até a implementação, monitoramento e observabilidade.
+          </p>
+        </div>
+      </section>
+      <section className="snap-start w-full h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-red-800 to-rose-800">
+        <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
+          Projetos
+        </h1>
+        <div className="bg-white relative rounded-lg shadow-[0_1.5rem_3rem_-0.75rem_hsla(0,0%,0%,0.25)] border-4 border-white">
+          <div className="clamp-slider z-0 grid grid-flow-col overflow-y-hidden overflow-x-scroll snap-x snap-mandatory scroll-smooth no-scrollbar">
+            <div id="project-1" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1704137479906-672fcc42a38d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }} />
+            <div id="project-2" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://plus.unsplash.com/premium_photo-1714051661301-860c930a2c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }} />
+            <div id="project-3" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2842&q=80)" }} />
+          </div>
+          <div className="flex gap-4 absolute bottom-5 left-1/2 -translate-x-1/2 z-10 bg-black p-1 bg-opacity-50">
+            <a href="#project-1" className="
+              w-3
+              h-3
+              rounded-full
+              bg-white
+              ease-in
+              duration-200
+              opacity-75
+
+              hover:opacity-100
+            "></a>
+            <a href="#project-2" className="
+              w-3
+              h-3
+              rounded-full
+              bg-white
+              ease-in
+              duration-200
+              opacity-75
+
+              hover:opacity-100
+            "></a>
+            <a href="#project-3" className="
+              w-3
+              h-3
+              rounded-full
+              bg-white
+              ease-in
+              duration-200
+              opacity-75
+
+              hover:opacity-100
+            "></a>
+          </div>
+        </div>
+      </section>
+      
+      <footer className="bg-black border-t-2 border-t-white h-48"></footer>
     </main>
   );
 }

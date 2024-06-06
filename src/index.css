@@ -12,6 +12,19 @@
 }
 
 @layer utilities {
+  :root {
+    --slide-width: clamp(320px, 75vw, 800px);
+	  --slide-height: clamp(240px, 75vh, 600px);
+  }
+
+  .clamp-slider {
+    max-width: var(--slide-width);
+  }
+
+  .clamp-slide {
+    width: var(--slide-width);
+	  height: var(--slide-height);
+  }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

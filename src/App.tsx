@@ -4,9 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
-//Componentes
+// Componentes
 import { TypingText } from "./components/TypingText";
 
+// Images
+import project1 from "./assets/images/police-high-speed-chase.jpeg";
+import project2 from "./assets/images/sweepstack-cup.jpg";
+import project3 from "./assets/images/fingerprint.jpg";
 
 function App() {
   const [headerColor, setHeaderColor] = useState<string>('');
@@ -36,7 +40,7 @@ function App() {
   }, []);
 
   return (
-    <main ref={mainRef} className="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar scroll-smooth">
+    <main ref={mainRef} className="snap-y snap-mandatory overflow-y-scroll h-screen no-scrollbar scroll-smooth overflow-x-hidden">
       <header className={`fixed top-0 left-0 p-6 h-16 w-full flex items-center border-b font-mono transition-all duration-200 z-50 ${headerColor}`}>
         <h1 className="font-medium text-lg transition-[color] duration-200 cursor-pointer" onClick={scrollBackToTop}>
           <span className="font-extralight">@</span>
@@ -153,7 +157,7 @@ function App() {
             DevOps & Back-End
           </h1>
           <p className="text-zinc-300 text-lg hyphens-auto text-justify">
-            No 4º semestre da graduação, entrei em um estágio de Engenharia DevOps na <a href="https://www.grupothink.com.br/">Think IT</a>.
+            No 4º semestre da graduação, entrei em um estágio de Engenharia DevOps na <a className="text-blue-400 underline" href="https://www.grupothink.com.br/">Think IT</a>.
             Entendi que a agilidade precisava se expandir para outros âmbitos de uma empresa muito além de apenas a 
             equipe de desenvolvimento. Depois de um tempo, a empresa me deu a oportunidade de atuar como desenvolvedor
             back-end.
@@ -176,13 +180,13 @@ function App() {
         <h1 className="text-4xl sm:text-6xl font-bold text-center mb-8">
           Projetos
         </h1>
-        <div className="bg-white relative rounded-lg shadow-[0_1.5rem_3rem_-0.75rem_hsla(0,0%,0%,0.25)] border-4 border-white">
+        <div className="bg-zinc-800 relative rounded-lg shadow-[0_1.5rem_3rem_-0.75rem_hsla(0,0%,0%,0.25)] border-4 border-white">
           <div className="clamp-slider z-0 grid grid-flow-col overflow-y-hidden overflow-x-scroll snap-x snap-mandatory scroll-smooth no-scrollbar">
-            <div id="project-1" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1704137479906-672fcc42a38d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }} />
-            <div id="project-2" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://plus.unsplash.com/premium_photo-1714051661301-860c930a2c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }} />
-            <div id="project-3" className="clamp-slide snap-start bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2842&q=80)" }} />
+            <a href="https://github.com/samuelastech/police-chase-system" target="_blank"><div id="project-1" className="clamp-slide snap-start bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url(" + project1 + ")" }} /></a>
+            <a href="https://github.com/samuelastech/sweepstake-cup" target="_blank"><div id="project-2" className="clamp-slide snap-start bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url(" + project2 + ")" }} /></a>
+            <div id="project-3" className="clamp-slide snap-start bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url(" + project3 + ")" }} />
           </div>
-          <div className="flex gap-4 absolute bottom-5 left-1/2 -translate-x-1/2 z-10 bg-black p-1 bg-opacity-50">
+          <div className="flex gap-4 absolute bottom-5 left-1/2 -translate-x-1/2 z-10">
             <a href="#project-1" className="
               w-3
               h-3

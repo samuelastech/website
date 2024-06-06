@@ -14,7 +14,7 @@
 @layer utilities {
   :root {
     --slide-width: clamp(320px, 75vw, 800px);
-	  --slide-height: clamp(240px, 75vh, 600px);
+	  --slide-height: clamp(240px, 75vh, 450px);
   }
 
   .clamp-slider {

@@ -22,7 +22,7 @@ export const Button = ({ icon: Icon, text, className, ...props }: ButtonProps) =
         border-2
         p-4
         w-full
-        max-w-80 
+        max-w-80
         z-10
         text-lg
         overflow-hidden

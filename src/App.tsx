@@ -8,8 +8,8 @@ import { IoClose } from "react-icons/io5";
 // Componentes
 import { TypingText } from "./components/TypingText";
 import { Section } from "./components/Section";
-import { Project } from "./components/Project";
 import { Socials } from "./components/Socials";
+import { Projects } from "./components/Project/Projects";
 
 function App() {
   const [headerColor, setHeaderColor] = useState<string>('');
@@ -126,25 +126,7 @@ function App() {
       <Section.Root className="bg-gradient-to-b from-yellow-800 to-red-800 space-y-2 sm:space-y-4">
         <Section.Title>Projetos</Section.Title>
         <Section.Wrapper>
-          <Project.Root>
-            <div className="space-y-3">
-              <Project.Title>Perseguições em alta velocidade</Project.Title>
-              <Project.Description>
-                Um policial dá ordem de parada, mas, o indíviduo empreendem fuga. O procedimento operacional pede que
-                o policial acompanhe o fugitivo em alta velocidade enquanto modula manualmente com a central. Esse
-                projeto propõe uma solução digital para o processo.
-              </Project.Description>
-              <Project.Tags>
-                <Project.Tag className="bg-green-700">Nest.js</Project.Tag>
-                <Project.Tag className="bg-green-700">MongoDB</Project.Tag>
-                <Project.Tag>Socket.io</Project.Tag>
-                <Project.Tag>ESP32</Project.Tag>
-                <Project.Tag>React DOM</Project.Tag>
-                <Project.Tag>React Native</Project.Tag>
-              </Project.Tags>
-            </div>
-            <Project.Link icon={MdOutlineArrowOutward} href="https://github.com/samuelastech/police-chase-system" />
-          </Project.Root>
+          <Projects />
         </Section.Wrapper>
       </Section.Root>
       

@@ -17,6 +17,13 @@
 	  --slide-height: clamp(240px, 75vh, 450px);
   }
 
+
+  .icon-wrapper:hover .tooltip {
+    @apply opacity-100;
+    @apply pointer-events-auto;
+    @apply -top-16;
+  }
+
   .clamp-slider {
     max-width: var(--slide-width);
   }

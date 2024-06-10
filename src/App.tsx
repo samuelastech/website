@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
 // Icons
-import { FaPlay } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { FaPlay } from "react-icons/fa";
 
 // Componentes
 import { TypingText } from "./components/TypingText";
 import { Section } from "./components/Section";
 import { Project } from "./components/Project";
+import { Socials } from "./components/Socials";
 
 function App() {
   const [headerColor, setHeaderColor] = useState<string>('');
@@ -48,7 +49,8 @@ function App() {
 
       <Section.Root>
         <Section.Title className="text-8xl sm:text-9xl">Samuel<br/>Araujo<br/>Souza</Section.Title>
-        <TypingText className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300" elementType='h2' cursorColor="white">Desenvolvedor back-end</TypingText>
+        <TypingText className="text-xl sm:text-2xl font-mono tracking-widest lowercase text-purple-300 mb-5" elementType='h2' cursorColor="white">Desenvolvedor back-end</TypingText>
+        <Socials />
       </Section.Root>
 
       <Section.Root className="bg-gradient-to-b from-lime-800 to-emerald-800">
@@ -86,7 +88,9 @@ function App() {
           <Section.Title>Ciência da Computação</Section.Title>
           <Section.Paragragph>
             Em 2020, entrei no ensino superior. Provei de diversas disciplinas e
-            conheci a computação a fundo.
+            conheci a computação a fundo. Aumentei meu leque de soluções e inputs
+            para soluções criativas, utilizando de diversos recursos que a 
+            computação provê.
           </Section.Paragragph>
         </Section.Wrapper>
       </Section.Root>
@@ -130,7 +134,11 @@ function App() {
       </Section.Root>
       
       <Section.Root type='footer' className="border-t-2 border-t-white h-48">
-        
+        <Section.Wrapper>
+          <Section.SmallText>Contato</Section.SmallText>
+          <Section.Title>Meus links</Section.Title>
+          <Socials />
+        </Section.Wrapper>
       </Section.Root>
     </main>
   );

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 // Icons
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaPlay } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 // Componentes
 import { TypingText } from "./components/TypingText";
@@ -80,6 +81,20 @@ function App() {
           </Section.Paragragph>
         </Section.Wrapper>
         <Section.Button className="hover:text-cyan-800" icon={FaPlay} text="Veja a batalha de maratona" onClick={toggleVideo} />
+        <div className={`absolute top-0 left-0 z-50 w-full h-full transition-all ${videoIsOpen ? 'block' : 'hidden'}`}>
+          <IoClose className="z-50 absolute top-16 right-6 text-white text-4xl border-2 rounded-full cursor-pointer duration-500 hover:bg-white hover:text-black" onClick={toggleVideo} />
+          <iframe
+            className="w-full h-full z-0"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/V3b6M5CzYTE?si=n-rdpCEPLZdG376O?autoplay=1"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen>
+          </iframe>
+        </div>
       </Section.Root>
 
       <Section.Root className="bg-gradient-to-b from-cyan-800 to-indigo-800">
